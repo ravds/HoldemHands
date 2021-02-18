@@ -1,3 +1,10 @@
+# With HoldemHands we input our hole cards and at least the flop (the turn and river are each optional), 
+# we simulate numPlayers-1 hands, we use findBestHandMade to figure out the best hand currently 
+# made by an opponent for each simulation, and divide this tally by the number of simulations, 
+# which should give us an unbiased estimator of the real likelihood of each hand being the best
+# made amongst numPlayers - 1 opponents. The first row contains 1's for every hand we have made, the second is an estimate of the pmf, and the third is that pdf summed to get the cdf
+
+
 # My friend, Daksh Sharma, has since gone on to develop a C++ program inspired by HoldemHands, to which I have shifted my focus because of its 500-1000x speed improvement. 
 # Despite optimizing my R code, simulations run at a speed of ~ 100/second, whereas Daksh's C++ version is able to currently run win/loss simulations at ~ 50 - 100k/second. 
 
